@@ -10,8 +10,18 @@ const getStaff  = async () => {
 
 const page = async () => {
     const AllEmployee:StaffDetails[] = await getStaff()
+const SheetParams = {
+    title:"Employees List",
+    tableParams:[
+        "ID",
+        "Name",
+        "Email",
+        "From",
+        "To",
+        "Enterprise Postion",
+    ]
+}
 
-;
   return (
     <Leave sheetParams={SheetParams} data={AllEmployee}/>
 
