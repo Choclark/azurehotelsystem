@@ -7,5 +7,5 @@ export default withAuth({
 });
 
 export const config = {
-  matcher: ['/booking/:path*','/dashboard','/customer/:path*','/rooms/:path*','/staff/:path*','/pricing','/employees/:path*','/accounts/:path*','/calendar',"/activities","/settings"], // Define paths where the middleware applies
+  matcher: ['/booking/:path*','/','/dashboard','/customer/:path*','/rooms/:path*','/staff/:path*','/pricing','/employees/:path*','/accounts/:path*','/calendar',"/activities","/settings"], // Define paths where the middleware applies
 };
