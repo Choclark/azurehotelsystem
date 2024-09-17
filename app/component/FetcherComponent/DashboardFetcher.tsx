@@ -49,13 +49,18 @@ const getBooking = async () => {
 }
 const getStaff  = async () => {
   "use server"
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/staff`,{next:{tags:["staff"]}})
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/staff`,{
+    
+    cache:"no-store",
+    next:{tags:["staff"]}})
   const data:{data:StaffDetails[]} = await res.json()
   return data.data
 }
 const getCustomer  = async () => {
   "use server"
-  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/customer`,{next:{tags:["customer"]}})
+  const res = await fetch(`${process.env.NEXTAUTH_URL}/api/customer`,{
+    cache:"no-store",
+    next:{tags:["customer"]}})
   const data:{data:CustomerDetails[]} = await res.json()
   return data.data
 }

@@ -30,7 +30,7 @@ const Title = styled.h1`
 
 const TeamContainer = styled.div`
   display: flex;
-  justify-content: right;
+  justify-content: center;
   align-items: center;
 `;
 
